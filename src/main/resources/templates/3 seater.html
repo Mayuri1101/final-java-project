@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/bed.css}">
+    
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Navbar -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img th:src="@{/images/name.jpg}" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Home</a>
+                </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home#about">About </a>
+      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/home#contact">Contact</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+       <a href="/login" class="btn btn-danger my-2 my-sm-0 mr-1" type="submit">Logout</a>
+    </form>
+  </div>
+  </nav>
+  </section>
+ <div class="container"> 
+   <h1>3 Seater Sofa</h1>
+   <div id="alerts"></div>
+<div class="productcont mt-5">
+   <div class="product">
+        	<img th:src="@{/images/woodensofa/i1.jpg}" class="product-img">
+            <h3 class="productname">half leather sofa</h3>
+            <p class="price">$-199</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+       <img th:src="@{/images/woodensofa/i2.jpg}" class="product-img">
+            <h3 class="productname">velvet sofa</h3>
+            <p class="price">$-199</p>
+            <p class="price">$8.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/woodensofa/i3.jpg}" class="product-img">
+            <h3 class="productname">wooden sofa</h3>
+            <p class="price">$-199</p>
+            <p class="price">$10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/woodensofa/i4.jpg}" class="product-img">
+            <h3 class="productname">leather sofa</h3>
+            <p class="price">$-199</p>
+            <p class="price">$10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/woodensofa/i5.jpg}" class="product-img">
+            <h3 class="productname">family sofa</h3>
+            <p class="price">$-199</p>
+            <p class="price">$10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/woodensofa/i6.jpg}" class="product-img">
+            <h3 class="productname">wood sofa</h3>
+            <p class="price">$-199</p>
+            <p class="price">$10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+          </div>
+        </div>
+</div>
+
+  
+ 
+<script type="text/javascript" th:src="@{/js/home.js}"></script>
+</body>
+</html>

@@ -42,6 +42,7 @@ public class LoginController {
     
  
      System.out.print(oauthUser);
+	    try{
      if(Objects.nonNull(oauthUser))
      {
   
@@ -54,6 +55,11 @@ public class LoginController {
     
     
      }
+	    }
+	    catch (Exception e){
+    	    System.out.println(e);
+    	}
+	return null;
  
 }
 }

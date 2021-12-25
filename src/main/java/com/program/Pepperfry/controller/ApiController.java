@@ -27,7 +27,7 @@ UserRepository ss;
 @Autowired
 CheckRepository cr;
 @GetMapping("/data")
-public List<UserData>get(){
+public List<UserData>read(){
 return ss.findAll();
 }
 //add data to the database
